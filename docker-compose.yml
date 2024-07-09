@@ -1,0 +1,4 @@
+name: ag-cabys-api
+services:
+  app:
+    image: cabys-api:dev
