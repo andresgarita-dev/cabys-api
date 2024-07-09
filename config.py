@@ -2,28 +2,24 @@ from pydantic_settings import BaseSettings
 import os
 
 
-class Settings(BaseSettings):
+class Settings():
     app_name: str = os.getenv('APP_NAME', 'No se encontró la variable')
 
 
-class DevelopmentConfig(BaseSettings):
+class DevelopmentConfig(Settings):
     app_env: str = 'development'
-    pass
 
 
-class TestingConfig(BaseSettings):
+class TestingConfig(Settings):
     app_env: str = 'testing'
-    pass
 
 
-class StagingConfig(BaseSettings):
+class StagingConfig(Settings):
     app_env: str = 'staging'
-    pass
 
 
-class ProductionConfig(BaseSettings):
+class ProductionConfig(Settings):
     app_env: str = 'production'
-    pass
 
 
 settings = {
