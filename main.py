@@ -4,7 +4,7 @@ from fastapi import FastAPI
 import config
 import os
 
-settings = config.settings[os.getenv('FASTAPI_ENV', 'development')]
+settings = config.settings[os.getenv('FASTAPI_ENV')]
 app = FastAPI()
 
 

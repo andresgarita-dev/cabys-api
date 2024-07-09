@@ -8,4 +8,4 @@ services:
       FASTAPI_ENV: development
       APP_NAME: Cabys API
     ports:
-      - "8001:8000"
+      - "8000:8000"
